@@ -1,5 +1,5 @@
 import getJoke from '../../data/jokeData';
-import seeJokes from '../seeJokes';
+import { seeJokes } from '../seeJokes';
 
 const domEvents = () => {
   document.querySelector('body').addEventListener('click', (e) => {
@@ -7,6 +7,10 @@ const domEvents = () => {
       getJoke().then((jokeArray) => {
         seeJokes(jokeArray);
       });
+    }
+    if (e.target.id.includes('pushForJoke')) {
+      document.querySelector('#jokeSetup').style.display = 'none';
+      document.querySelector('#jokePunchLine').style.display = 'block';
     }
   });
 };

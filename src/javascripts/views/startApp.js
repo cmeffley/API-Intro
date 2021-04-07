@@ -1,13 +1,10 @@
 import domBuilder from '../components/domBuilder';
 import domEvents from '../components/events/domEvents';
-import seeJokes from '../components/seeJokes';
-import getJoke from '../data/jokeData';
+import { jokeStart } from '../components/seeJokes';
 
 const startApp = () => {
   domBuilder();
-  getJoke().then((response) => {
-    seeJokes(response);
-  });
+  jokeStart();
   domEvents();
 };
 
