@@ -1,10 +1,12 @@
 import domBuilder from '../components/domBuilder';
 import domEvents from '../components/events/domEvents';
-import { jokeStart } from '../components/seeJokes';
+import navEvents from '../components/events/navEvents';
+import navBar from '../components/navBar';
 
 const startApp = () => {
   domBuilder();
-  jokeStart();
+  navBar();
+  navEvents();
   domEvents();
 };
 

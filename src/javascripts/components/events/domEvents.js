@@ -8,9 +8,15 @@ const domEvents = () => {
         seeJokes(jokeArray);
       });
     }
-    if (e.target.id.includes('pushForJoke')) {
-      document.querySelector('#jokeSetup').style.display = 'none';
+    if (e.target.id.includes('getPunchLine')) {
       document.querySelector('#jokePunchLine').style.display = 'block';
+      document.querySelector('#getPunchLine').style.display = 'none';
+      document.querySelector('#getNewJoke').style.display = 'block';
+    }
+    if (e.target.id.includes('getNewJoke')) {
+      getJoke().then((jokeArray) => {
+        seeJokes(jokeArray);
+      });
     }
   });
 };
