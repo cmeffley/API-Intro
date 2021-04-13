@@ -5,20 +5,17 @@ const lyricSearchCard = () => {
     <div class="card-body">
       <h4 class="card-title">Song Lyric Search Form</h4></br>
       <p class="card-text">Artist:</p>
-      <input type="text" placeholder="Artist" id="artistName">
+      <input type="text" placeholder="Artist" id="artistName" required>
       <p class="card-text">Song Title:</p>
-      <input type="text" placeholder="Song Title" id="songTitle"></br></br>
+      <input type="text" placeholder="Song Title" id="songTitle" required></br></br>
       <button type="button" id="pushForLyrics" class="btn btn-success">Search for Lyrics</button>
     </div>
-</div>`;
+</div>
+<div id="showLyrics"></div>`;
 };
 
-// const searchLyrics = () => {
-//   document.querySelector('#pushForLyrics').addEventListener('click', (e) => {
-//     if (e.target.id.includes('artistName') && e.target.id.includes('songTitle')) {
+const seeLyrics = (sing) => {
+  document.querySelector('#showLyrics').innerHTML = `<div id="showLyrics">${sing.lyrics}</div>`;
+};
 
-//     }
-//   })
-// }
-
-export default lyricSearchCard;
+export { lyricSearchCard, seeLyrics };

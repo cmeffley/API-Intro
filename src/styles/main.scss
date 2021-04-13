@@ -2,7 +2,7 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
 body {
-  background-color: rgb(43, 40, 82);
+  background-color: rgb(132, 149, 243);
   color: black;
   text-align: center;
   margin-top: 100px;
@@ -14,5 +14,14 @@ body {
 
   h4 {
     color: turquoise;
+  }
+}
+
+#lyrics {
+  width: 50%;
+  margin: auto;
+
+  #showLyrics {
+    text-align: left;
   }
 }
