@@ -1,4 +1,6 @@
 import getJoke from '../../data/jokeData';
+import getLyrics from '../../data/lyricData';
+import { seeLyrics } from '../lyricSearch';
 import { seeJokes } from '../seeJokes';
 
 const domEvents = () => {
@@ -17,6 +19,12 @@ const domEvents = () => {
       getJoke().then((jokeArray) => {
         seeJokes(jokeArray);
       });
+    }
+    if (e.target.id.includes('pushForLyrics')) {
+      e.preventDefault();
+      const artist = document.querySelector('#artistName').value;
+      const songTitle = document.querySelector('#songTitle').value;
+      getLyrics(artist, songTitle).then((response) => seeLyrics(response));
     }
   });
 };
