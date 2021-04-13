@@ -3,6 +3,7 @@ const domBuilder = () => {
   <div id="mainContainer">
     <div id="jokes"></div>
     <div id="lyrics"></div>
+    <div id="weather"></div>
   </div>`;
 };
 
