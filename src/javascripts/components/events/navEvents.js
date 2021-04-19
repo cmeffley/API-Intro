@@ -1,6 +1,7 @@
 import getJoke from '../../data/jokeData';
 import { jokeStart } from '../seeJokes';
 import { lyricSearchCard } from '../lyricSearch';
+import { searchWeather } from '../weatherCard';
 
 const navEvents = () => {
   document.querySelector('body').addEventListener('click', (e) => {
@@ -11,6 +12,9 @@ const navEvents = () => {
     }
     if (e.target.id.includes('lyricPage')) {
       lyricSearchCard();
+    }
+    if (e.target.id.includes('weatherPage')) {
+      searchWeather();
     }
   });
 };
