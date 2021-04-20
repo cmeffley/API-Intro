@@ -14,12 +14,12 @@ const searchWeather = () => {
 };
 
 const seeWeather = (weatherObject) => {
-  document.querySelector('#weatherAppearsHere').innerHTML += `
+  document.querySelector('#weatherAppearsHere').innerHTML = `
   <div class="card" style="width: 15rem">
     <img class="card-img-top" src="http://openweathermap.org/img/wn/${weatherObject.weather[0].icon}@2x.png" alt="Weather Icon">
   <div class="card-body">
     <h5>${weatherObject.name}</h5>
-    <p>${weatherObject.weather[0].main}</p>
+    <p>${weatherObject.weather[0].main} | ${weatherObject.weather[0].description}</p>
   </div>
   </div>`;
 };
