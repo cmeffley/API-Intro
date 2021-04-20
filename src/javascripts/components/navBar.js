@@ -18,6 +18,9 @@ const navBar = () => {
       <li class="nav-item active">
       <a class="nav-link" href="#" id="lyricPage">Lyrics<span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item active">
+      <a class="nav-link" href="#" id="weatherPage">Weather<span class="sr-only">(current)</span></a>
+      </li>
     </ul>
     <div id="logout-button"></div>
   </div>

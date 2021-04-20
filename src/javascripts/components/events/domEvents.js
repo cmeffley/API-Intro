@@ -1,7 +1,9 @@
 import getJoke from '../../data/jokeData';
 import getLyrics from '../../data/lyricData';
+import getWeather from '../../data/weatherData';
 import { seeLyrics } from '../lyricSearch';
 import { seeJokes } from '../seeJokes';
+import { seeWeather } from '../weatherCard';
 
 const domEvents = () => {
   document.querySelector('body').addEventListener('click', (e) => {
@@ -25,6 +27,12 @@ const domEvents = () => {
       const artist = document.querySelector('#artistName').value;
       const songTitle = document.querySelector('#songTitle').value;
       getLyrics(artist, songTitle).then((response) => seeLyrics(response));
+    }
+
+    if (e.target.id.includes('pushForWeather')) {
+      e.preventDefault();
+      const city = document.querySelector('#forecastSearch').value;
+      getWeather(city).then((response) => seeWeather(response));
     }
   });
 };

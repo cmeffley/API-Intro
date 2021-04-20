@@ -5,9 +5,9 @@ const lyricSearchCard = () => {
     <div class="card-body">
       <h4 class="card-title">Song Lyric Search Form</h4></br>
       <p class="card-text">Artist:</p>
-      <input type="text" placeholder="Artist" id="artistName" required>
+      <input type="text" class="form-control" placeholder="Artist" id="artistName" required>
       <p class="card-text">Song Title:</p>
-      <input type="text" placeholder="Song Title" id="songTitle" required></br></br>
+      <input type="text" class="form-control" placeholder="Song Title" id="songTitle" required></br></br>
       <button type="button" id="pushForLyrics" class="btn btn-success">Search for Lyrics</button>
     </div>
 </div>
