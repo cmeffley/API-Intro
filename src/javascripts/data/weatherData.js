@@ -1,7 +1,7 @@
 import axios from 'axios';
 import firebaseConfig from '../helpers/apiKeys';
 
-const url = 'https://api.openweathermap.org/data/2.5/forecast';
+const url = 'https://api.openweathermap.org/data/2.5/weather';
 const api = firebaseConfig.apiKey;
 
 const getWeather = (city) => new Promise((resolve, reject) => {

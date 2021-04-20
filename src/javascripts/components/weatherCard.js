@@ -3,20 +3,25 @@ const searchWeather = () => {
   document.querySelector('#lyrics').innerHTML = '';
 
   document.querySelector('#weather').innerHTML = `
-  <div id="weatherAppearsHere"></div>
   <div class="card">
   <div class="card-body">
     <h4 class="card-title">Check the Weather</h4></br>
-    <input type="text" placeholder="City" id="searchWeather"></br></br>
+    <input type="text" class="form-control" placeholder="City" id="forecastSearch"></br></br>
     <button type="button" id="pushForWeather" class="btn btn-info">Submit</button>
   </div>
-  <div id="showWeather"></div>
+  <div id="weatherAppearsHere"></div>
 </div>`;
 };
 
-const seeWeather = (weather) => {
-  document.querySelector('#showWeather').innerHTML = `${weather.list[0].weather.main}
-  http://openweathermap.org/img/wn/${weather.list[0].weather.icon}@2x.png`;
+const seeWeather = (weatherObject) => {
+  document.querySelector('#weatherAppearsHere').innerHTML += `
+  <div class="card" style="width: 15rem">
+    <img class="card-img-top" src="http://openweathermap.org/img/wn/${weatherObject.weather[0].icon}@2x.png" alt="Weather Icon">
+  <div class="card-body">
+    <h5>${weatherObject.name}</h5>
+    <p>${weatherObject.weather[0].main}</p>
+  </div>
+  </div>`;
 };
 
 export { searchWeather, seeWeather };

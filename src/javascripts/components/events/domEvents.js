@@ -31,8 +31,8 @@ const domEvents = () => {
 
     if (e.target.id.includes('pushForWeather')) {
       e.preventDefault();
-      const weather = document.querySelector('#searchWeather').value;
-      getWeather(weather).then((response) => seeWeather(response));
+      const city = document.querySelector('#forecastSearch').value;
+      getWeather(city).then((response) => seeWeather(response));
     }
   });
 };
